@@ -1,5 +1,7 @@
 import Modal from "react-bootstrap/Modal";
 import CloseButton from "react-bootstrap/CloseButton";
+import Button from "react-bootstrap/Button";
+
 import React, { useState } from 'react';
 
 export const DetailPage = ({ data, show, onClose, sinceTime, tillTime }) => {
@@ -12,6 +14,9 @@ export const DetailPage = ({ data, show, onClose, sinceTime, tillTime }) => {
         </Modal.Header>
         <Modal.Body>
           <img src={data.image} className="mw-100" />
+          <br />
+          <br />
+          <Button href={data.videoUrl} variant="primary">Play</Button>
           <br />
           <br />
           <p>
